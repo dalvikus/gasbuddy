@@ -1,0 +1,268 @@
+
+
+#yui-history-iframe{
+	border: 0;
+}
+
+
+
+ul.errorBullets li {
+	list-style-type: disc;
+	margin-left: 15px;
+}
+			
+.home-directions .directions li{display:block;}
+
+
+.bubble_close{
+	position: relative;
+	float:right;
+}
+
+.yui-module { display: none;
+	}
+
+
+.bubble_heading{
+	float:left;
+}
+
+.close_button{
+	background: url("http://maps.randmcnally.com/images/btn_close.png") no-repeat;
+	height:13px;
+	width:14px;
+}
+
+
+.bubble_top_lt, 
+.bubble_lt, 
+.bubble_bot_lt,
+.bubble_top,
+.bubble_cnt,
+.bubble_bot,
+.bubble_top_rt, 
+.bubble_rt, 
+.bubble_bot_rt{
+	float:left;
+}
+
+.bubble_top_lt,
+.bubble_lt,
+.bubble_bot_lt
+{
+	width:12px;
+}
+
+.bubble_top_rt,
+.bubble_rt, 
+.bubble_bot_rt{
+	width:16px;
+}
+
+.bubble_lt, 
+.bubble_cnt, 
+.bubble_rt{
+	height:100%;
+}
+
+.bubble_bot_lt,
+.bubble_bot, 
+.bubble_bot_rt{
+	height:12px;
+}
+
+.bubble_top_lt{
+/*	background: url("http://maps.randmcnally.com/images/bubble_hdr_lt.png") no-repeat;*/
+}
+
+.bubble_top{
+	/*background: url("http://maps.randmcnally.com/images/bubble_hdr.png") repeat-x;*/
+}
+
+.bubble_top_rt{
+	/*background: url("http://maps.randmcnally.com/images/bubble_hdr_rt.png") 100% 0 no-repeat;*/
+}    
+
+.bubble_lt{
+/*	background: url("http://maps.randmcnally.com/images/bubble_lt.png") 0 0 repeat-y;*/
+}
+
+.bubble_cnt{
+	/*background: url("http://maps.randmcnally.com/images/bubble.png") repeat;*/
+}
+
+.bubble_rt{
+	/*background: url("http://maps.randmcnally.com/images/bubble_rt.png") 100% 0 repeat-y;	*/
+}
+
+.bubble_bot_lt{
+	/*background: url("http://maps.randmcnally.com/images/bubble_bot_lt.png") no-repeat;*/
+	height:40px;
+}
+
+.bubble_bot{
+	/*background: url("http://maps.randmcnally.com/images/bubble-new.gif");
+	background-repeat:no-repeat;
+	background-position:-85px bottom;*/
+	height:40px;width:auto;
+	
+	width:252px !important
+}
+
+.bubble_bot_rt{
+/*	background: url("http://maps.randmcnally.com/images/bubble_bot_rt.png") 100% 0 no-repeat;*/
+height:40px;
+}
+
+.save_button{
+	text-align:right;
+	margin-top:5px;
+}
+
+.chkrad_set{
+	float:left;
+	padding-bottom:5px;
+	padding-right:3px;
+}
+
+.chkrad_set .radio, .chkrad_set .description{
+	float:left;
+}
+
+.chkrad_set .description{
+	padding-left:4px;
+}
+
+#error{
+	position:absolute;
+	width:400px;
+	z-index:202; /*if change this param, need to test on FFox 3*/
+	display:none;
+}
+
+#error_arrow{
+	width:36px;
+ 	float:left;
+}
+
+#error_body{
+	 width:347px;
+ 	 float:left;
+}
+
+.error_arrow{
+	 position:relative;
+	 top:20px;
+	 left:21px;
+	 height:24px;
+	 width:36px;
+	 background: url("http://maps.randmcnally.com/images/error_arrow.png") no-repeat;
+	 z-index:2;
+}
+
+#error_mid{
+	height:175px;
+	
+}
+
+#error_text, #addresses_text{
+	text-align:left;
+	margin-top:12px;
+	width:260px;
+	overflow:hidden;
+	clear: both;
+}
+
+#error_text{
+	text-align:left;
+	margin-top:2px;
+	padding-left:1px;
+	width:252px;
+	overflow:hidden;
+}
+
+#error .close_button{
+ background: url("http://maps.randmcnally.com/images/btn_close_error.png") no-repeat;
+ height:12px;
+ width:12px;
+}
+
+
+#error .bubble_top, 
+#error .bubble_cnt, 
+#error .bubble_bot{
+	width:302px;
+}
+/*
+#error .bubble_top_lt{
+	background: url("http://maps.randmcnally.com/images/error_hdr_lt.png") no-repeat;
+ 	width:20px;
+ 	height:22px;
+}
+
+
+#error .bubble_top{
+ background: url("http://maps.randmcnally.com/images/error_hdr.png") repeat-x;
+ height:22px;
+}
+ 
+#error .bubble_top_rt{
+ background: url("http://maps.randmcnally.com/images/error_hdr_rt.png") 100% 0 no-repeat;
+ width:25px;
+ height:22px;
+}    
+
+#error .bubble_lt{
+	background: url("http://maps.randmcnally.com/images/error_lt.png") 0 0 repeat-y;
+ width:20px;
+}
+
+#error .bubble_cnt{
+ background: url("http://maps.randmcnally.com/images/error.png") repeat;
+}
+ 
+#error .bubble_rt{
+ background: url("http://maps.randmcnally.com/images/error_rt.png") 100% 0 repeat-y; 
+ width:25px;
+}
+ 
+#error .bubble_bot_lt{
+ background: url("http://maps.randmcnally.com/images/error_bot_lt.png") no-repeat;
+ width:20px;
+ height:26px;
+}
+ 
+#error .bubble_bot{
+ background: url("http://maps.randmcnally.com/images/error_bot.png") repeat-x;
+ height:26px;
+}
+ 
+#error .bubble_bot_rt{
+ background: url("http://maps.randmcnally.com/images/error_bot_rt.png") 100% 0 no-repeat;
+ width:25px;
+ height:26px;
+}
+
+*/
+
+#bubble{
+	top: 180px;
+	position: absolute;
+	z-index: 9999999;
+}
+
+#bubble .middle h2{
+	float: none;
+	margin-bottom: 10px;
+}
+
+#bubble table{
+	float: left;
+	position: relative;
+	z-index: 99999999;
+}
+
+#bubble .middle td{
+	line-height: 1;
+}
+

@@ -1,0 +1,463 @@
+.RMControls {
+	position: absolute;
+	-moz-user-select:none;
+	/*z-Index: 200;*/
+}
+
+/**
+ * ZOOM BAR
+ */
+
+div#RMZoomBar {
+	left: 26px;
+	top: 71px;
+	width: 19px; 
+	height: 160px;
+	z-index: 100;
+	margin-left: 0px;	
+}
+
+div#RMZoomBar .zoomlevelbar {
+	
+	/*filter: Alpha(opacity=70);
+	opacity: 0.7;*/
+	width: 19px;
+	position:relative!important;
+}
+
+div#RMZoomBar .zoominbutton {
+	overflow: hidden;
+	cursor: hand;
+	cursor: pointer;	
+	
+	width:18px;
+	height:26px;
+	background:url(../../images/sprite_chunky.png) no-repeat -463px -267px;
+}
+
+* html div#RMZoomBar .zoominbutton {
+	background:url(../../images/sprite_chunky.gif) no-repeat -463px -267px;
+}
+
+div#RMZoomBar .zoomoutbutton {
+	cursor: hand;
+	cursor: pointer;
+	
+	width:18px;
+	height:30px;
+	background:url(../../images/sprite_chunky.png) no-repeat -493px -267px;
+
+}
+
+* html div#RMZoomBar .zoomoutbutton {
+	background:url(../../images/sprite_chunky.gif) no-repeat -493px -267px;
+
+}
+
+div#RMZoomBar #zoomlevelcursor {
+	left: 0!important;
+	top: 110px;
+	position: absolute;
+	overflow: hidden;
+	z-index: 101;
+	
+	width:19px;
+	height:7px;
+	background:url(../../images/sprite_chunky.png) no-repeat -523px -271px;
+	
+}
+
+* html div#RMZoomBar #zoomlevelcursor {
+	background:url(../../images/sprite_chunky.gif) no-repeat -523px -271px;
+	
+}
+
+div#RMZoomBar .cursorpressed {
+	background-image: url('../../images/zoomcursorhover.png');
+}
+
+div#RMZoomBar .levelbutton {
+	width:  19px;
+	height: 8px;
+	background:url('../../images/sprite_chunky.png') no-repeat -553px -271px;
+	overflow: hidden;
+	cursor: hand;
+	cursor: pointer;
+	filter:alpha(opacity=100)!important;-moz-opacity:1!important;opacity:1!important;
+	
+}
+
+div#RMZoomBar .levelbutton {background/*\**/:url('../../images/sprite_chunky.gif') no-repeat -553px -271px\9; }
+* html div#RMZoomBar .levelbutton {background:url('../../images/sprite_chunky.gif') no-repeat -553px -271px; }
+
+
+#cursorregion {
+	top : 0;
+	left: -5px;
+	width: 28px;
+	height: 135px;
+	margin: 0;
+	position: absolute;
+	z-index: -99;
+}
+
+
+div#RMZoomBar .hoverlevel {
+	/*background-image: url('../../images/zoomlevelhover.png');
+	background-repeat: repeat-x;
+	opacity: 1.0;
+	moz-opacity: 1.0;
+	filter: Alpha(opacity=100);*/
+}
+
+
+/**
+ * RMScaleBar CSS Class
+ */
+
+#RMScaleBar {
+	bottom: 15px;
+	left:5px;
+	*left:0px;
+	
+}
+
+.RMScaleBarBar {
+	border : 1px solid white;
+	background-color : #0000aa;
+	overflow: hidden;
+	line-height : 0px;
+	margin-bottom: 2px;
+	margin-top : 5px;
+	margin-right : 2px;
+	margin-left:22px;
+	*margin-left:13px;
+	height: 3px;
+	float:left;	
+	clear: left;
+	-moz-opacity: 0.6;
+	filter: Alpha(opacity=60);
+	opacity: 0.6;
+	z-index:50;
+		
+}	
+
+.RMScaleBarUnit{
+	font-weight: 500;
+	font-family: Arial;
+	font-size: 7pt;
+	padding: 0px;
+	height: 14px;
+	margin-bottom: -2px;	
+	filter: glow(Color=#FFFFFF,Strength=2);
+	
+}
+.RMCopyright{
+
+	margin-bottom: 7px;
+	margin-right: 7px;
+	z-index: 50;
+	bottom: 3px;
+	left:5px;	
+	text-align:right;
+}
+
+.RMCopyright_background {
+	font-weight: 500;
+	font-family: Arial;
+	font-size: 8pt;
+	height: 14px;
+	filter: glow(Color=#FFFFFF,Strength=2);
+	float:right;
+	margin: 0;
+	padding: 0;
+}
+
+/**
+ * RMPanButton CSS Class
+ */
+
+.northwest
+{
+    background-image:url('../../images/panNW.png');
+    background-repeat:no-repeat;
+    width:20px;
+    height:20px;
+ 
+}
+
+.north
+{
+    background-image:url('../../images/panN.png');
+    background-repeat:no-repeat;
+    width:50px;
+    height:8px;
+	margin-left: -25px;
+ 
+}
+
+.northeast
+{
+    background-image:url('../../images/panNE.png');
+    background-repeat:no-repeat;
+    width:20px;
+    height:20px;
+ 
+}
+
+.east
+{
+    background-image:url('../../images/panE.png');
+    background-repeat:no-repeat;
+    width:8px;
+    height:50px;
+ 
+}
+
+.west
+{
+    background-image:url('../../images/panW.png');
+    background-repeat:no-repeat;
+    width:8px;
+    height:50px;
+ 
+}
+
+.southwest
+{
+    background-image:url('../../images/panSW.png');
+    background-repeat:no-repeat;
+    width:20px;
+    height:20px;
+ 
+}
+
+.southeast
+{
+    background-image:url('../../images/panSE.png');
+    background-repeat:no-repeat;
+    width:20px;
+    height:20px;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/panSE.png',sizingMethod=scale)
+	 	
+}
+
+.south
+{
+    background-image:url('../../images/panS.png');
+    background-repeat:no-repeat;
+    width:50px;
+    height:8px;
+	margin-left: -25px;
+	
+}
+
+/* .panbutton {
+	opacity: 0.3;
+	-moz-opacity: 0.3;
+	filter: Alpha(opacity=30);
+	
+}
+
+.panbuttonhover {
+	opacity: 1;
+	-moz-opacity: 1;
+	filter: Alpha(opacity=100);
+}
+
+.panbuttondown {
+	opacity: 0.2;
+	-moz-opacity: 0.2;
+	filter: Alpha(opacity=20);
+} */
+
+
+/* Map Compass */
+.map-compass {background-position:0 0;height:58px;left:9px;list-style:none;margin:0;padding:0;position:absolute;top:10px;width:54px;z-index:10;}
+.map-compass li {display:block;margin:0;overflow:hidden;padding:0;position:absolute;}
+.map-compass li.compass-north, .map-compass li.compass-south {height:12px;line-height:12px;left:12px;top:0;width:30px;}
+.map-compass li.compass-south {top:42px;}
+.map-compass li.compass-east, .map-compass li.compass-west {height:30px;left:0;line-height:30px;top:12px;width:12px;}
+.map-compass li.compass-east {left:42px;}
+.map-compass li a {cursor:pointer;display:block;height:100%;text-indent:-9999px;width:100%;}
+.map-compass li.compass-north a {background-position:-66px 0;}
+.map-compass li.compass-east a {background-position:-96px -12px;}
+.map-compass li.compass-south a {background-position:-66px -42px;}
+.map-compass li.compass-west a {background-position:-54px -12px;}
+.map-compass li.compass-north a:hover {background-position:-120px 0;}
+.map-compass li.compass-east a:hover {background-position:-150px -12px;}
+.map-compass li.compass-south a:hover {background-position:-120px -42px;}
+.map-compass li.compass-west a:hover {background-position:-108px -12px;}
+.map-compass li.compass-center {
+	top: 12px;
+	line-height: 30px;
+	width: 30px;
+	left: 12px;
+}
+.map-compass li.compass-center a {background-position: -66px -12px;}
+.map-compass, .map-compass li a {background-image/**/:url(../../images/compass.png);background-repeat:no-repeat;}
+* html .map-compass, * html .map-compass li a {background-image:url(../../images/compass.gif);background-repeat:no-repeat;}
+
+
+.hintcat {
+	color: #111188;
+}
+
+.hinthighlight {
+	font-weight: bold;
+}
+
+.hintexpand {
+ 	font-weight: bold; 
+	color: white; 
+	z-index: 999; 
+	padding: 2px 5px; 
+	background-color: #3355CC; 
+	border-style: solid; 
+}
+
+.hintpoi {
+	background: url("../../images/poi_marker_sm.gif") 0px 1px;
+	background-repeat: no-repeat;
+	padding-left: 13px;
+}
+
+.hintpoicategory {
+	background: url("../../images/poi_category_hint_marker.gif") 0px 1px;
+	background-repeat: no-repeat;
+	padding-left: 19px;
+}
+
+.hintlocation {
+	background: url("../../images/location_marker_sm.gif") 0px 2px;
+	background-repeat: no-repeat;
+	padding-left: 11px;
+}
+
+
+.yui-ac-shadow, .yui-ac-content {
+	left: 0;
+}
+
+/* styles for entire widget */
+.yui-ac {
+    position:relative;font-family:arial;font-size:100%;
+}
+
+/* styles for input field */
+.yui-ac-input {
+}
+
+/* styles for results container */
+.yui-ac-container {
+    position:absolute;
+    top:1.6em;
+    width:0;
+    z-index: 1;
+}
+
+/* styles for header/body/footer wrapper within container */
+.yui-ac-content {
+    position:absolute;width:100%;border:1px solid #808080;background:#fff;overflow:hidden;z-index:9050;
+}
+
+/* styles for container shadow */
+.yui-ac-shadow {
+    position:absolute;
+    margin:.3em;
+    width:100%;
+    background:#000;
+    -moz-opacity: 0.10;
+    opacity:.10;
+    filter:alpha(opacity=10);
+    z-index:9049;
+    height: 0;
+}
+
+/* styles for results list */
+.yui-ac-content ul{
+    margin:0;padding:0;width:100%;
+}
+
+/* styles for result item */
+.yui-ac-content li {
+    margin:0;padding:2px 5px;cursor:default;white-space:nowrap;
+}
+
+/* styles for prehighlighted result item */
+.yui-ac-content li.yui-ac-prehighlight {
+    background:#B3D4FF;
+}
+
+/* styles for highlighted result item */
+.yui-ac-content li.yui-ac-highlight {
+    background:#426FD9;color:#FFF;
+}
+
+
+.yui-ac-shadow, .yui-ac-content {
+	left: 0;
+}
+
+/* styles for entire widget */
+.yui-ac {
+    position:relative;font-family:arial;font-size:100%;
+}
+
+/* styles for input field */
+.yui-ac-input {
+}
+
+/* styles for results container */
+.yui-ac-container {
+    position:absolute;
+    top:1.6em;
+    width:0;
+    z-index: 10000!important;
+}
+
+/* styles for header/body/footer wrapper within container */
+.yui-ac-content {
+    position:absolute;width:100%;border:1px solid #808080;background:#fff;overflow:hidden;z-index:9050;font-size:13px;
+}
+
+/* styles for container shadow */
+.yui-ac-shadow {
+    position:absolute;
+    margin:.3em;
+    width:100%;
+    background:#000;
+    -moz-opacity: 0.10;
+    opacity:.10;
+    filter:alpha(opacity=10);
+    z-index:9049;
+    height: 0;
+}
+
+/* styles for results list */
+.yui-ac-content ul{
+    margin:0;padding:0;width:100%;
+}
+
+/* styles for result item */
+.yui-ac-content li {
+    margin:0;padding:2px 5px;cursor:default;white-space:nowrap;
+}
+
+/* styles for prehighlighted result item */
+.yui-ac-content li.yui-ac-prehighlight {
+    background:#B3D4FF;
+}
+
+/* styles for highlighted result item */
+.yui-ac-content li.yui-ac-highlight {
+    background:#426FD9;color:#FFF!important;
+}
+.yui-ac-content li.yui-ac-highlight .hintcat {
+    color:#FFF!important;
+}
+
+.decarta-zoom {
+	/*border: 1px dashed red;*/
+	display: none;
+}

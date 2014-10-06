@@ -1,0 +1,27 @@
+#viewPortTransparentLayer
+{
+    filter:alpha(opacity=30);  
+    opacity:0.3;        
+    background-color:black;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    z-index:500;   
+	
+}
+
+#viewPortTransparentLayerMessageBox
+{
+    position:absolute;
+    width:100%;
+    height:100%; 
+    z-index:800;
+    background-image:url('../../images/spinner.gif'); 
+	background-position: center; 
+	background-repeat: no-repeat;
+	        
+}
+        
+           

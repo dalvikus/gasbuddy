@@ -1,0 +1,699 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"><head>
+<!--botr01.randmcnally.com-->
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+	<title>Mileage Calculator - Rand McNally</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta name="description" content="Calculate the mileage for your travel plans and trips.  Plan your driving routes and road trips before you leave."> 
+    <meta name="keywords" content="mileage calculator, calculate mileage, mileage of a trip, mileage of a route, plan a trip, number of miles,      driving directions, find number of miles, miles map, mileage map"> 
+   	
+   	<link rel="icon" href="http://maps.randmcnally.com/favicon.ico">
+    
+	<style>
+v\:* {
+	behavior: url(#default#VML);
+}
+
+</style>
+
+<link id="screen_css" rel="stylesheet" type="text/css" href="Mileage%20Calculator%20-%20Rand%20McNally_files/screen.css" media="all">
+<link id="print_css" rel="stylesheet" type="text/css" href="Mileage%20Calculator%20-%20Rand%20McNally_files/print.css" media="all">
+
+<!--[if IE 6]>
+
+<style type="text/css">
+#maps_dir_content{
+/*	height: expression( this.scrollHeight > 225 ? "225px" : "auto" ); /* sets max-height for IE */
+}
+
+.segment_step{
+cursor: pointer;
+}
+
+</style>
+<link id="print_css_ie6" rel="stylesheet" type="text/css" href="stylesheets/cmnStylesheetPrintIE6.css" media="print" title="print_css_ie6" />
+<![endif]-->
+<!-- Added iframe refresh for TAN 350x250 ads in the incExternalAds.inc File 10-4-10 -->
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript"> 
+	var decartaUrl = "http://rand-vip.prod.sv.decartahws.com/openls/JSON";
+	var decartaUserName  = "randmcnally:maps";
+ 	var decartaPassword = "8161tfj0tT";
+ 	var decartaConfiguration = "global-rand";
+ 	var decartaTransparentConfiguration="global-rand-transparent";
+ 	var decartaDGkey = "ZC86Y5FfS1iGEZrk7B5kVQfzUwVirdnH";
+	var loggerURL = "http://maps.randmcnally.com/logger";
+	var mapLoggerUp = true;
+	
+	var remoteHost = "";
+	var IS_LOGGING_ACTIVE = false;
+	var BOTR_RVDA_POI_SEARCH_WS = "rvdaPOISearch.do";
+	var BOTR_RVDA_VIEW_POI_URL_PREFIX = "http://www.bestoftheroad.com/place.do?poiId=";
+	var CITY_SEARCH_WS = "/citygrid/locationSearchV2.do";
+	var CITY_PROFILE_WS = "/citygrid/profile.do";
+	var CITY_OFFER_WS = "/citygrid/offer.do";
+	var CITY_SPONSOR_WS = "/citygrid/sponsor.do";
+	var CITY_BACKGROUND_WS = "/citygrid/pois.do";
+	var INFO_WINDOW_ZINDEX = 1000;
+	var INFO_BALOON_ZINDEX = 999;
+//	var TANAD_REFRESH_INTERVAL_SECONDS = 90;
+	var TANAD_REFRESH_INTERVAL_SECONDS = 86400;
+	var SHOW_SPLASH = true;
+	var SPONSOR_POI_WS = "/adpois/pois.do";
+	var SPONSOR_POI_BK_WS = "${com.randmcnally.randmcnallymaps.be.SponsorCampaignConfiguration.bkSponsorPoiWs";
+	var SPONSOR_ACTIVE_WS = "/adpois/sponsor.do";
+	
+	var LEFTCOLUMNSCROLLLEVEL = [0,0];
+
+	var CHOICE_HOTEL_ACTIVE_TRACKER = "http://ad.doubleclick.net/ad/ta.randmcnally/choice40imp;sz=1x1;ord=_random_";
+	var CHOICE_HOTEL_SPONSOR_POI_TRACKER_URI = "http://ad.doubleclick.net/ad/ta.randmcnally/choice15imp;sz=1x1;ord=_random_";
+	var CHOICE_HOTEL_MORE_INFO_TRACKER = "http://ad.doubleclick.net/clk;243553206;67318314;c?http://ad.doubleclick.net/clk;241909546;64703216;i";//"http://ad.doubleclick.net/clk;243553206;67318314;c?http://ad.doubleclick.net/clk;243553206;67270283;e?http://ad.doubleclick.net/clk;241909546;64703216;i";
+										  
+	var BASE_PATH_CSS = "stylesheets";
+	var BASE_PATH_JS = "javascript/source";
+	var BASE_PATH_IMG = "images";		
+	
+	var MAP_API_KEY = "nvmTRlLpAVWVzdneWBXiGP2Ob2H01u/EWsCLpmzHeVc= ";
+	
+	var conf_MAP_ENGINE_TILE_HOST1 = "a2atile1.rmservers.com";
+	var conf_MAP_ENGINE_TILE_HOST2 = "a2atile2.rmservers.com";
+	var conf_MAP_ENGINE_TILE_HOST3 = "a2atile3.rmservers.com";
+	var conf_MAP_ENGINE_TILE_HOST4 = "a2atile4.rmservers.com";
+	var conf_MAP_ENGINE_TILE_PORT = 80;
+	
+	var conf_MAP_ENGINE_ROUTE_HOST1 = "a2aroute2a.rmservers.com";
+	var conf_MAP_ENGINE_ROUTE_HOST2 = "a2aroute2b.rmservers.com";
+	var conf_MAP_ENGINE_ROUTE_HOST3 = "a2aroute2c.rmservers.com";
+	var conf_MAP_ENGINE_ROUTE_HOST4 = "a2aroute2d.rmservers.com";
+	var conf_MAP_ENGINE_ROUTE_PORT = 80;
+	
+	var conf_MAP_ENGINE_POI_HOST = "a2apoi.rmservers.com";
+	var conf_MAP_ENGINE_POI_PORT = 80;
+	
+	var conf_MAP_ENGINE_GEOCODE_HOST = "a2ageo.rmservers.com";
+	var conf_MAP_ENGINE_GEOCODE_PORT = 80;
+	
+	var Lat49 ;
+	
+	var VIDEO_PLUGIN ;
+	var CATEGORY_CONTAINER ;
+	var Url;
+	
+	var isIE6 = false;
+	var isIE7 = false;
+	var IS_PRINT_PREVIEW = false;
+
+	var CLASSIC_URL = "http://maps.randmcnally.com/classic";
+	var RMC_URL = "http://www.randmcnally.com";
+</script>
+
+
+<script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/jquery.js"></script>
+<script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/jquery-ui.js"></script>
+<script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/yui-subset.js"></script>
+<script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/tabview-min.js"></script> 
+<script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/container-min.js"></script> 
+<script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/RMLogger.js"></script> 
+<script type="text/javascript"> 
+try{
+		if(undefined == iamfromlogger || null == iamfromlogger)
+			mapLoggerUp = false;
+	}catch(ignored){
+		mapLoggerUp = false;
+	}
+</script>
+<!--
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>        
+-->
+        
+        <script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/deCarta.js"></script>
+
+        <script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/Main.js"></script>
+
+<!--
+        <script type="text/javascript" src="javascript/deCarta/json2.js"></script>
+-->
+
+        <script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/Configuration.js"></script>
+        <script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/UserPreferences.js"></script>
+
+        <script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/UI.js"></script>
+
+        <script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/Search.js"></script>
+        <script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/SearchCache.js"></script>
+        <script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/SearchPanel.js"></script>
+
+<!--
+        <script type="text/javascript" src="javascript/deCarta/Directions.js"></script>
+        <script type="text/javascript" src="javascript/deCarta/DirectionsPanel.js"></script>
+        <script type="text/javascript" src="javascript/deCarta/Waypoint.js"></script>
+-->
+
+        <script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/Cookie.js"></script>
+
+        <script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/ContextMenu.js"></script>
+        <script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/Localizer.js"></script>
+<!--
+        <script type="text/javascript" src="javascript/deCarta/iconFinder.js"></script>
+        <script type="text/javascript" src="javascript/deCarta/MessageBox.js"></script>
+        
+        <script type="text/javascript" src="javascript/deCarta/About.js"></script>
+        <script type="text/javascript" src="javascript/deCarta/RouteSimulator.js"></script>
+-->
+
+        <script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/Util.js"></script>
+<!--
+        <script type="text/javascript" src="javascript/deCarta/Sharing.js"></script>
+        <script type="text/javascript" src="javascript/deCarta/ShareWindow.js"></script>
+        <script type="text/javascript" src="javascript/deCarta/jquery/ui.selectmenu.js"></script>
+        <script type="text/javascript" src="javascript/deCarta/jquery/jQueryPlugins.js"></script>        
+-->
+
+<!--
+        <script type="text/javascript">
+            $(window).load(function(){
+
+//                var urlParams = Utilities.urlParse(window.location.href).queryParameters;
+//
+//                if (urlParams.code && deCarta.App.Sharing.available){
+//                    deCarta.App.Sharing.get(urlParams.code, function(data){                        
+//                        deCarta.App.main(data);
+//                    }, function(){                        
+//                        alert('Could not load shared info! Please try again later. ');
+//                        deCarta.App.main();
+//                    });
+//                } else {
+//                    deCarta.App.mainWrapper( "master_control", "mapControl" );
+//                }
+            });
+        </script>
+-->
+
+
+<script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/out.js"></script><link media="all" href="Mileage%20Calculator%20-%20Rand%20McNally_files/tiles.css" type="text/css" rel="stylesheet"><link media="print" href="Mileage%20Calculator%20-%20Rand%20McNally_files/tilesprint.css" type="text/css" rel="stylesheet"><script src="Mileage%20Calculator%20-%20Rand%20McNally_files/RMOverlaysUtilities_svg.js"></script><link href="Mileage%20Calculator%20-%20Rand%20McNally_files/RMOverlays.css" type="text/css" rel="stylesheet"><link href="Mileage%20Calculator%20-%20Rand%20McNally_files/RMControls.css" type="text/css" rel="stylesheet"><link href="Mileage%20Calculator%20-%20Rand%20McNally_files/viewPort.css" type="text/css" rel="stylesheet"><link href="Mileage%20Calculator%20-%20Rand%20McNally_files/custom-rand-skin.css" type="text/css" rel="stylesheet">
+
+
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="Mileage%20Calculator%20-%20Rand%20McNally_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-3096297-1");
+		pageTracker._setDomainName('.randmcnally.com');
+		pageTracker._setAllowLinker(true);
+		pageTracker._setAllowHash(false);
+		pageTracker._trackPageview("/rmc/directions/maps-and-directions.jsp");
+		
+		pageTracker = _gat._getTracker("UA-3096297-3");
+		pageTracker._trackPageview();
+	} catch(err) {}
+</script>
+ 
+
+
+<script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/RMMilBaloonTip.js"></script>
+<script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/yui-autocomplete281.js"></script>
+<script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/RMScriptAutoComplete.js"></script>
+<link id="screen_css" title="screen_css" rel="stylesheet" type="text/css" href="Mileage%20Calculator%20-%20Rand%20McNally_files/RMMileageStyle.css" media="screen">
+<link rel="stylesheet" href="Mileage%20Calculator%20-%20Rand%20McNally_files/reset.css" type="text/css">
+<script type="text/javascript" src="Mileage%20Calculator%20-%20Rand%20McNally_files/RMMileage.js"></script>
+
+
+<script type="text/javascript">
+		var mapAndDirDefaultCaptionWhere = 'Address, City, State, or Zip';
+		decartaUserName  = "randmcnally:rmc";
+		/*constants required by rmmap_min.js */
+		var MAPSDOMAIN = "http://maps.randmcnally.com";
+	   	var BASE_PATH_CSS = "http://maps.randmcnally.com/stylesheets";
+		var BASE_PATH_JS = "http://maps.randmcnally.com/javascript/source";
+		var BASE_PATH_IMG = "http://maps.randmcnally.com/images";	
+		var MOBILELAYOUT = false;
+		var RESULTDIV = false;
+		var ipaddress = "75.80.179.106";
+
+$(document).ready(function(){
+	$('#clearResult').click(function(e) {
+		$('#rmOthers').show();
+		$('#resultMileage').hide();
+		  document.getElementById("loc1").value = '';
+		  document.getElementById("loc2").value = '';
+		   });
+
+	$('#getDirection').click(function(e) {
+		getDirections();
+		   });
+      
+     
+    	  $('.destinationField').focus(function(e) {
+    		   setSearchCaption(this.id, '');
+    		    });
+
+    		$('.destinationField').blur(function(e) {
+    		   setSearchCaption(this.id, 'blur');
+    		    });
+    	  setSearchCaption("loc1", 'blur', mapAndDirDefaultCaptionWhere);
+        setSearchCaption("loc2", 'blur', mapAndDirDefaultCaptionWhere);
+
+        if (!MOBILELAYOUT) {
+           	$('#frmGetMileage').keydown(function(e) {
+           	      if(e.keyCode == 13) {
+           	         calcMileage();
+           	      }
+           	      });
+        } else {
+        	$('.clear-field').click(function() {
+                var id = this.id.substring(0,4);
+                $("#"+id).removeClass('watermark');
+                $('#'+id).val('');
+                $('#'+id).focus();
+             });         
+        }
+      });
+
+      function getDirections() {
+          var addressFrom = document.getElementById("loc1").value;
+          var addressTo = document.getElementById("loc2").value;
+          location.href="http://maps.randmcnally.com?s=screen&loc1="+escape(addressFrom)+"&loc2="+escape(addressTo);
+     }      
+</script>
+	
+     
+
+</head>
+<body class="rand-skin" onload="" onunload="" id="_body_">
+<div id="container">
+
+<div style="font-size: 14px; padding: 4px;" onclick="this.style.display = 'none';">
+<img src="Mileage%20Calculator%20-%20Rand%20McNally_files/iconClose.png" style="vertical-align: middle;">
+Go beyond just driving directions! Try Rand McNally's new <a href="http://tripmaker.randmcnally.com/" target="_blank">TripMaker</a> to discover points of interest on your next road trip.
+</div>
+
+
+<!-- acct -->
+	
+<!-- main nav -->
+	<div id="topMenuId" class="menu">
+		
+
+
+
+
+
+
+
+<div id="global-nav-maps" class="clear">
+  <iframe scrolling="no" allowtransparency="true" marginwidth="0" marginheight="0" style="padding:5px 5px 0 0 z-index:99" src="Mileage%20Calculator%20-%20Rand%20McNally_files/criteo728x90.html" id="ad-728x90" frameborder="0" height="90" width="728"></iframe>
+  	<!-- Header Logo area -->
+    <h3><a href="http://www.randmcnally.com/" class="map-nav-bg">Rand McNally</a></h3>
+ 
+</div><!-- global-nav -->
+
+<!-- Contact Popup -->
+<div id="dialog-newsletter" title="Get the latest news from Rand McNally" class="hide">
+   <p>
+   Receive product news and learn about special savings events.  Sign up to start receiving Rand McNally's e-mail updates, now.</p>
+   <form id="subscribeNews">
+    <label for="subscribeEmail"></label>
+   	Enter your email : <input maxlength="180" id="subscribeEmail" style="width: 250px" type="text"> <br><br>
+   	 <span id="ErrorNewsletter" class="message-error hide">Incorrect Email format</span>
+   	 <span id="ErrorNewsletter2" style="color: red" class="hide">Could not subscribe your Email, please try later.</span>
+   	 <span id="loadingNewsletter" class="hide">
+   	    <img alt="" src="Mileage%20Calculator%20-%20Rand%20McNally_files/loading.gif"> <strong> Processing...</strong></span>
+   	 <span id="ConfirmNewsletter" style="color: green" class="hide">
+   	 You will now receive the latest new Rand McNally Products and enjoy exclusive discounts on purchases.
+   	 </span>
+   </form>
+</div>
+<!-- Contact Popup JS init -->	
+<script type="text/javascript">
+//<![CDATA[
+           
+function initDialog () {
+
+	$("#dialog-newsletter").dialog({
+		   resizable: false,
+		   autoOpen: false,
+		   draggable: false,
+		   width:450,
+		   modal: true,
+		   buttons: {
+		      'Submit': function() {
+		           $("#ErrorNewsletter").hide();
+		           $("#ConfirmNewsletter").hide();
+		           $("#ErrorNewsletter2").hide();
+		           $("#loadingNewsletter").hide();
+	   
+	    
+		            var emailParam = $("#subscribeEmail").val();
+		            if(validateEmail(emailParam)) {
+
+		            	
+		            	$("#loadingNewsletter").show();
+
+			            $.ajax({
+			            	  url: '/suscribeNewsletter.do?email='+emailParam,
+			            	  type: 'GET',
+			            	  complete: function(transport) {
+			            	     if(transport.status == 200) {
+			            	    	 $("#loadingNewsletter").hide();
+			            	    	 $("#ConfirmNewsletter").show();
+
+
+			            	    	 var options = {
+			            	    	 	    buttons: {
+			            	    	 	        Ok: function () {
+					            	    		 $("#ErrorNewsletter").hide();
+					            		           $("#ConfirmNewsletter").hide();
+					            		           $("#ErrorNewsletter2").hide();
+					            		           $("#loadingNewsletter").hide();
+					            		           $("#subscribeEmail").val('');
+			            	    	 	            $(this).dialog('destroy');
+			            	    	 	           initDialog();
+			            	    	 	        }
+			            	    	 	    }
+			            	    	 	};
+			            	    	 	$("#dialog-newsletter").dialog('option', options);
+			            	    	     
+			            	     } else {
+			            	    	 $("#loadingNewsletter").hide();
+			            	    	 $("#ErrorNewsletter").show();
+			            	     }
+			            	  }
+			            	 });
+			            						
+
+		                  
+			            //$(this).dialog('close');
+		            } else {
+		            	$("#ErrorNewsletter").show();
+		            }
+		             
+
+		            
+		         
+		      },
+		      Cancel: function() {
+		    	  $("#ErrorNewsletter").hide();
+		           $("#ConfirmNewsletter").hide();
+		           $("#ErrorNewsletter2").hide();
+		           $("#loadingNewsletter").hide();
+		           $("#subscribeEmail").val('');
+		         $(this).dialog('close');
+		      }
+		   }
+		  });	
+}
+
+
+
+	$('a.SubscribeNewsletter').click(function() {
+		   jQuery.data(document.body, 'deleteId', this.name);
+		   $("#dialog-newsletter").dialog("open");
+		});
+//]]>
+</script>
+
+	</div>
+
+	<div id="content">
+	<!-- main search -->
+	
+	
+<div style="margin:0 auto;width:985px;text-align:left;font-size:12px">
+<h1 class="mileageHeader">Mileage Calculator</h1>
+<div id="account-form" class="column">		
+<div class="home-directions">
+                        <div class="directions">
+                            <fieldset id="directionFields">
+                                The Rand McNally mileage calculator will
+ help you determine the mileage between any two destinations.
+                                <br>
+                                <br>
+                                <form name="frmGetMileage" id="frmGetMileage" class="directions" action="javascript:getMileage()">
+                                    <p>
+                                        <strong>Enter Starting Point</strong>
+                                    </p>
+                                    <label>
+                                        A
+                                    </label>
+                                    <input autocomplete="off" name="loc1" id="loc1" class="destinationField yui-ac-input" type="text"><div class="yui-ac-container" id="container0"><div style="display: none;" class="yui-ac-content"><div style="display: none;" class="yui-ac-hd"></div><div class="yui-ac-bd"><ul><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li></ul></div><div style="display: none;" class="yui-ac-ft"></div></div></div>
+                                    <input name="loc1text" id="loc1text" style="display: none" type="hidden">
+									<input name="loc1latlon" id="loc1latlon" style="display: none" type="hidden">
+                                    <p>
+                                        <strong>Enter Ending Point</strong>
+                                    </p>
+                                    <label>
+                                        B
+                                    </label>
+                                    <input autocomplete="off" name="loc2" id="loc2" class="destinationField yui-ac-input" type="text"><div class="yui-ac-container" id="container1"><div style="display: none;" class="yui-ac-content"><div style="display: none;" class="yui-ac-hd"></div><div class="yui-ac-bd"><ul><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li><li style="display: none;"></li></ul></div><div style="display: none;" class="yui-ac-ft"></div></div></div>
+                                    <input name="loc2text" id="loc2text" style="display: none" type="hidden">
+									<input name="loc2latlon" id="loc2latlon" style="display: none" type="hidden">
+                                    <br>
+                                    <a id="linkButton" onclick="calcMileage();" class="button">Get Mileage</a>
+                                </form>
+                            </fieldset>
+                        </div>
+                    </div>
+                    
+                    
+                    <div style="display: none;" id="loading" class="hide">
+                      <img alt="" src="Mileage%20Calculator%20-%20Rand%20McNally_files/loading.gif"><br>
+                      <span style="text-indent: -60px">Calculating mileage</span>
+                    </div>
+                    
+                    
+                    <div style="display: none;" id="resultMileage" class="hide">
+                     <div style="width: 280px">
+	                      <div class="floatL block" id="milDist">
+		                      <div class="header">Mileage</div>
+		                       <div class="content" id="mileageValue">6.9 miles</div>
+		                      
+		                   </div>
+		                   
+		                    <div style="margin-left: 10px;" class="block floatL" id="milTime">
+		                      <div class="header">Time</div>
+		                       <div class="content" id="mileageTime">18 min  47 sec</div>
+		                      
+		                   </div>
+	                   </div>
+	                   <a class="" href="#" id="clearResult">Clear Result</a>
+	                   
+	                   <a id="getDirection" onclick="getDirections();">Get Directions for This Route</a>
+                    </div>
+
+<div id="rmOthers" style="float: left; width: 290px; margin-left: 5px; padding: 5px 10px 10px; background: none repeat scroll 0% 0% rgb(240, 240, 240); height: 250px;">
+
+<!-- <p>Try Rand McNally's other Trip Planning Services:</p>
+
+   <ul>
+   <li><a href="http://maps.randmcnally.com">Online Maps</a></li>
+   <li><a href="http://maps.randmcnally.com">Driving Directions </a></li>
+   <li><a href="/destinations.do;jsessionid=48D8E3DAA656A9CB73A36ABC62DDAA37">Travel Guides</a></li>
+   <li><a href="http://hotels.randmcnally.com/"> Find a Hotel Deal </a></li>
+   <li><a href="http://www.tripology.com/"> Plan a Trip with help from one of our Travel Specialists</a></li>
+   </ul> -->
+</div>
+
+
+
+
+</div>
+
+		<!-- error div to display error balloon. If you want to change its UI, please keep the main div id as "error" only as this is being picked from code --> 
+		 <div id="error" class="hide" onmousedown="event.cancelBubble=true" style="font-size: 11px; font-family: Arial,Helvetica,sans-serif; margin-left: -430px; display: none;">
+            <div id="error_arrow">
+                <img src="Mileage%20Calculator%20-%20Rand%20McNally_files/spacer.gif" alt="" title="" class="error_arrow" height="1px" width="1px">
+            </div>
+            <div id="error_body">
+                <div class="bubble_top_lt">
+                    &nbsp;
+                </div>
+                <div class="bubble_top">
+                    &nbsp;
+                </div>
+                <div class="bubble_top_rt">
+                    &nbsp;
+                </div>
+                <div id="error_mid">
+                    <div class="bubble_lt">
+                        &nbsp;
+                    </div>
+                    <div class="bubble_cnt">
+                        <div class="bubble_close">
+                            <a href="javascript:hidePanel();">Close <img src="Mileage%20Calculator%20-%20Rand%20McNally_files/spacer.gif" alt="Close" title="Close" class="close_button button" height="13" width="14"></a>
+                        </div>
+                        <div id="error_text">
+                        </div>
+                    </div>
+                    <div class="bubble_rt">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="bubble_bot_lt">
+                    &nbsp;
+                </div>
+                <div class="bubble_bot">
+                    &nbsp;
+                </div>
+                <div class="bubble_bot_rt">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+<div id="right" class="column" style="margin-top: 20px">
+<iframe scrolling="no" allowtransparency="true" marginwidth="0" marginheight="0" style="padding: 9px 0 9px" src="Mileage%20Calculator%20-%20Rand%20McNally_files/criteo300x250.html" id="ad1Iframe" frameborder="0" height="250" width="300"></iframe>
+</div>
+</div>
+	
+	
+
+	</div><!-- content -->
+  
+<!-- SiteCatalyst code version: H.23.3.
+Copyright 1996-2011 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<!--
+<script language="JavaScript" type="text/javascript" src="javascript/s_code.js"></script>
+-->
+<script language="JavaScript" type="text/javascript"><!--
+///* You may give each page an identifying name, server, and channel on
+//the next lines. */
+//s.pageName="/maps/beta"
+//s.server="maps.randmcnaly.com"
+//s.channel="randmcnally"
+//s.pageType=""
+//s.prop1=""
+//s.prop2=""
+//s.prop3=""
+//s.prop4=""
+//s.prop5=""
+///* Conversion Variables */
+//s.campaign=""
+//s.state=""
+//s.zip=""
+//s.events=""
+//s.products=""
+//s.purchaseID=""
+//s.eVar1=""
+//s.eVar2=""
+//s.eVar3=""
+//s.eVar4=""
+//s.eVar5=""
+///************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+//var s_code=s.t();if(s_code)document.write(s_code)
+//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://randmcnally.112.2o7.net/b/ss/randmcnally/1/H.23.3--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.23.3. -->
+<script type="text/javascript"><!--
+function refreshTanAd(pId){
+	var theIframe = document.getElementById(pId);
+	
+	if(theIframe == null)
+		return;
+	
+	var oUrl = theIframe.src.split("?")[0];
+	var oUrlParams=new Array();
+	var oDestination,oOrigin;
+		
+	var oPoiPanel = document.getElementById("find_place");
+	var oDirectionsPanel = document.getElementById("maps_dir");
+	
+	var oDesCountryName, oDesStateName, oDesCityName,oCountryName, oStateName, oCityName;
+
+	if(oDirectionsPanel.style.display!="none"){
+		oDestination = directionPanel.arrayOfAddresses[directionPanel.arrayOfAddresses.length-1];
+		if ( directionPanel.arrayOfAddresses && directionPanel.arrayOfAddresses.length != 0 )
+		{
+			oOrigin = directionPanel.arrayOfAddresses[0];
+			
+			oCountryName = (oOrigin.country!=null&&oOrigin.country!="")?oOrigin.country:"USA";
+			oStateName = (oOrigin.state!=null&&oOrigin.state!="")?oOrigin.state.replace(" ","+"):null;
+			oCityName = (oOrigin.city!=null&&oOrigin.city!="")?oOrigin.city.replace(" ","+"):null;
+		}
+		else oOrigin = null;
+	} else if(oPoiPanel.style.display != "none") {
+		oDestination = poiPanel._geocodedAddress;
+		oOrigin = null;
+		
+	}
+	
+	
+	if(oOrigin != null){
+		oCountryName = (oOrigin.country!=null&&oOrigin.country!="")?oOrigin.country:"USA";
+		oStateName = (oOrigin.state!=null&&oOrigin.state!="")?oOrigin.state.replace(" ","+"):null;
+		oCityName = (oOrigin.city!=null&&oOrigin.city!="")?oOrigin.city.replace(" ","+"):null;;
+		
+		oUrlParams.push("Ocountry="+oCountryName)
+		if(oStateName!=null){
+			oUrlParams.push("Ostate="+oStateName)
+			if(oCityName!=null)
+				oUrlParams.push("Ocity="+oCityName)
+		}
+	}
+
+	if(oDestination != null){
+		oDesCountryName = (oDestination.country!=null&&oDestination.country!="")?oDestination.country:"USA";
+		oDesStateName = (oDestination.state!=null&&oDestination.state!="")?oDestination.state.replace(" ","+"):null;
+		oDesCityName = (oDestination.city!=null&&oDestination.city!="")?oDestination.city.replace(" ","+"):null;
+		
+		oUrlParams.push("Dcountry="+oDesCountryName)
+		if(oDesStateName!=null){
+			oUrlParams.push("Dstate="+oDesStateName)
+			if(oDesCityName!=null)
+				oUrlParams.push("Dcity="+oDesCityName)
+		}
+	}
+	
+	theIframe.src=null;
+	if(oUrlParams.length>0)
+		oUrl += "?"+oUrlParams.join("&");
+		
+	theIframe.src = oUrl;
+}
+
+function queryStringForSrcElementID( id )
+{
+	var el = document.getElementById( id );
+	if ( el ) return srcQueryStringForElement( el );
+	return "";
+}
+
+function srcQueryStringForElement( el )
+{
+	if ( el )
+	{
+		var src = el.src;
+
+		if ( src.indexOf( "?" ) != -1 )
+			return src.replace( /^.*\?/, "" );
+	}
+
+	return "";
+}
+//--></script>
+</div><!-- container -->
+   
+   
+
+
+
+	</body></html>
