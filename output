@@ -1,0 +1,120 @@
+sort by "posted or cash" prices
+----------------------------
+ARCO (ampm) [#11621]: a
+300 N Bristol St, Costa Mesa, CA 92626-7945 (3.6 miles)
+    3.53 (posted)
+    3.59 (cash)
+    3.53 (credit card)
+    adjusted: 3.70 ($40), 3.91 (4 gal) based on mileage: 22 (m/gal)
+USA Gasoline [#35157]: d
+4601 Campus Dr, Irvine, CA 92612-7614 (1.7 miles)
+    3.59 (posted)
+    3.59 (cash)
+    undef (credit card)
+    adjusted: 3.64 ($40), 3.73 (4 gal) based on mileage: 22 (m/gal)
+ARCO [#26832]: c
+2100 SE Bristol St, Newport Beach, CA 92660-1728 (3.2 miles)
+    3.63 (posted)
+    3.63 (cash)
+    undef (credit card)
+    adjusted: 3.73 ($40), 3.91 (4 gal) based on mileage: 22 (m/gal)
+Circle K [#94631]: f
+5793 Alton Pkwy, Irvine, CA 92618-4057 (4.3 miles)
+    3.67 (posted)
+    3.67 (cash)
+    undef (credit card)
+    adjusted: 3.81 ($40), 4.07 (4 gal) based on mileage: 22 (m/gal)
+Shell [#22730]: b
+1512 SE Bristol St, Costa Mesa, CA 92626-8604 (3.7 miles)
+    3.75 (posted)
+    3.69 (cash)
+    3.75 (credit card)
+    adjusted: 3.81 ($40), 4.03 (4 gal) based on mileage: 22 (m/gal)
+Chevron (ExtraMile) [#15909]: e
+18002 Culver Dr, Irvine, CA 92612-2701 (2.1 miles)
+    3.79 (posted)
+    3.79 (cash)
+    3.79 (credit card)
+    adjusted: 3.86 ($40), 3.98 (4 gal) based on mileage: 22 (m/gal)
+----------------------------
+
+sort by "adjusted" cash prices in given dollars = 40
+----------------------------
+USA Gasoline [#35157]: d
+4601 Campus Dr, Irvine, CA 92612-7614 (1.7 miles)
+    3.59 (posted)
+    3.59 (cash)
+    undef (credit card)
+    adjusted: 3.64 ($40), 3.73 (4 gal) based on mileage: 22 (m/gal)
+ARCO (ampm) [#11621]: a
+300 N Bristol St, Costa Mesa, CA 92626-7945 (3.6 miles)
+    3.53 (posted)
+    3.59 (cash)
+    3.53 (credit card)
+    adjusted: 3.70 ($40), 3.91 (4 gal) based on mileage: 22 (m/gal)
+ARCO [#26832]: c
+2100 SE Bristol St, Newport Beach, CA 92660-1728 (3.2 miles)
+    3.63 (posted)
+    3.63 (cash)
+    undef (credit card)
+    adjusted: 3.73 ($40), 3.91 (4 gal) based on mileage: 22 (m/gal)
+Circle K [#94631]: f
+5793 Alton Pkwy, Irvine, CA 92618-4057 (4.3 miles)
+    3.67 (posted)
+    3.67 (cash)
+    undef (credit card)
+    adjusted: 3.81 ($40), 4.07 (4 gal) based on mileage: 22 (m/gal)
+Shell [#22730]: b
+1512 SE Bristol St, Costa Mesa, CA 92626-8604 (3.7 miles)
+    3.75 (posted)
+    3.69 (cash)
+    3.75 (credit card)
+    adjusted: 3.81 ($40), 4.03 (4 gal) based on mileage: 22 (m/gal)
+Chevron (ExtraMile) [#15909]: e
+18002 Culver Dr, Irvine, CA 92612-2701 (2.1 miles)
+    3.79 (posted)
+    3.79 (cash)
+    3.79 (credit card)
+    adjusted: 3.86 ($40), 3.98 (4 gal) based on mileage: 22 (m/gal)
+----------------------------
+
+sort by "adjusted" cash prices in given gallons = 4
+----------------------------
+USA Gasoline [#35157]: d
+4601 Campus Dr, Irvine, CA 92612-7614 (1.7 miles)
+    3.59 (posted)
+    3.59 (cash)
+    undef (credit card)
+    adjusted: 3.64 ($40), 3.73 (4 gal) based on mileage: 22 (m/gal)
+ARCO (ampm) [#11621]: a
+300 N Bristol St, Costa Mesa, CA 92626-7945 (3.6 miles)
+    3.53 (posted)
+    3.59 (cash)
+    3.53 (credit card)
+    adjusted: 3.70 ($40), 3.91 (4 gal) based on mileage: 22 (m/gal)
+ARCO [#26832]: c
+2100 SE Bristol St, Newport Beach, CA 92660-1728 (3.2 miles)
+    3.63 (posted)
+    3.63 (cash)
+    undef (credit card)
+    adjusted: 3.73 ($40), 3.91 (4 gal) based on mileage: 22 (m/gal)
+Chevron (ExtraMile) [#15909]: e
+18002 Culver Dr, Irvine, CA 92612-2701 (2.1 miles)
+    3.79 (posted)
+    3.79 (cash)
+    3.79 (credit card)
+    adjusted: 3.86 ($40), 3.98 (4 gal) based on mileage: 22 (m/gal)
+Shell [#22730]: b
+1512 SE Bristol St, Costa Mesa, CA 92626-8604 (3.7 miles)
+    3.75 (posted)
+    3.69 (cash)
+    3.75 (credit card)
+    adjusted: 3.81 ($40), 4.03 (4 gal) based on mileage: 22 (m/gal)
+Circle K [#94631]: f
+5793 Alton Pkwy, Irvine, CA 92618-4057 (4.3 miles)
+    3.67 (posted)
+    3.67 (cash)
+    undef (credit card)
+    adjusted: 3.81 ($40), 4.07 (4 gal) based on mileage: 22 (m/gal)
+----------------------------
+
